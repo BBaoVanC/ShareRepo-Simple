@@ -2,14 +2,11 @@
     const urlParams = new URLSearchParams(window.location.search);
     const pkgman = urlParams.get('pkgman');
     const repo = urlParams.get('repo');
-    
-    if (pkgman == "zebra") {
-        window.location.replace(`zbra://sources/add/${repo}`);
-    }
-    
-    if (pkgman == "sileo") {
-        window.location.replace(`sileo://source/${repo}`);
-    }
+    if (pkgman == "sileo") { window.location.replace(`sileo://source/${repo}`); }
+    if (pkgman == "cydia") { window.location.replace(`cydia://url/https://cydia.saurik.com/api/share#?source=${repo}`); }
+    if (pkgman == "zebra") { window.location.replace(`zbra://sources/add/${repo}`); }
+    if (pkgman == "installer") { window.location.replace(`installer://add/${repo}`); }
 </script>
-
-Something went wrong redirecting you to your package manager.<br><br><a href=https://sharerepo.stkc.win/>Return home</a>
+<html>
+    Something went wrong redirecting you to your package manager.<br><br><a href=https://sharerepo.stkc.win/>Return home</a>
+</html>
